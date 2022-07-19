@@ -1,0 +1,40 @@
+
+================================================================
+======== FXServer Starting - 18/7/2022 3:43:24                  
+================================================================
+[                 cmd] Argument count mismatch (passed 3, wanted 2)
+[    c-scripting-core] Creating script environments for _cfx_internal
+[ citizen-server-impl] [0mScanning resources.
+[ citizen-server-impl] Found 25 resources.
+[          svadhesive] Authenticating server license key...
+[          svadhesive] Server license key authentication succeeded. Welcome!
+[    c-scripting-core] Creating script environments for sessionmanager
+[ citizen-server-impl] Started resource sessionmanager
+[    c-scripting-core] Creating script environments for monitor
+[      script:monitor] [txAdminClient] Version 4.14.0 starting...
+[ citizen-server-impl] Started resource monitor
+[      net-tcp-server] Listening on socket failed - libuv error EADDRINUSE.
+[      net-tcp-server] error on connection: address already in use
+[ citizen-server-impl] Error: Could not bind on 0.0.0.0:30120 - is this address valid and not already in use?
+[ citizen-server-impl] 
+> quit "Server restarting (crash detected)."
+
+================================================================
+======== FXServer Starting - 18/7/2022 3:44:34                  
+================================================================
+[                 cmd] Argument count mismatch (passed 3, wanted 2)
+[    c-scripting-core] Creating script environments for _cfx_internal
+[ citizen-server-impl] Scanning resources.
+[ citizen-server-impl] Found 25 resources.
+[          svadhesive] Authenticating server license key...
+[          svadhesive] Server license key authentication succeeded. Welcome!
+[    c-scripting-core] Creating script environments for sessionmanager
+[ citizen-server-impl] Started resource sessionmanager
+[    c-scripting-core] Creating script environments for monitor
+[      script:monitor] [txAdminClient] Version 4.14.0 starting...
+[ citizen-server-impl] Started resource monitor
+[      net-tcp-server] Listening on socket failed - libuv error EADDRINUSE.
+[      net-tcp-server] error on connection: address already in use
+[ citizen-server-impl] Error: Could not bind on 0.0.0.0:30120 - is this address valid and not already in use?
+[ citizen-server-impl] 
+> quit "Server restarting (sextsense)."

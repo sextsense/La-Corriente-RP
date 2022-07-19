@@ -1,0 +1,9 @@
+.header {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    bottom: 3.0vw;
+    right: 1.0vw;
+    color: rgb(255, 255, 255);
+    font-size: 0.42vw;
+}

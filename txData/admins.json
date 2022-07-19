@@ -1,0 +1,21 @@
+[
+  {
+    "name": "sextsense",
+    "master": true,
+    "password_hash": "$2a$11$c81ua0YhcbGfxi6lAazoW.MPL5.YXr8TcbvDsJoX0uUHhZNfqpDvS",
+    "providers": {
+      "citizenfx": {
+        "id": "sextsense",
+        "identifier": "fivem:7547465",
+        "data": {
+          "sub": "541a1e74914e42f77aef363f2b7904b8",
+          "nameid": "https://forum.cfx.re/internal/user/7547465",
+          "name": "sextsense",
+          "picture": "https://avatars.discourse.org/v4/letter/s/7933a0/256.png",
+          "profile": "https://forum.cfx.re/u/sextsense"
+        }
+      }
+    },
+    "permissions": []
+  }
+]
