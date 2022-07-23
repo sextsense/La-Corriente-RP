@@ -6,9 +6,9 @@ Config.MarkerSize                 = { x = 1.5, y = 1.5, z = 0.5 }
 Config.MarkerColor                = { r = 150, g = 0, b = 255 }
 
 Config.EnablePlayerManagement     = true
-Config.EnableArmoryManagement     = false
+Config.EnableArmoryManagement     = true
 Config.EnableESXIdentity          = true -- enable if you're using esx_identity
-Config.EnableNonFreemodePeds      = true -- turn this on if you want custom peds
+Config.EnableNonFreemodePeds      = false -- turn this on if you want custom peds
 Config.EnableLicenses             = true -- enable if you're using esx_license
 
 Config.EnableHandcuffTimer        = true -- enable handcuff timer? will unrestrain player after the time ends
@@ -228,7 +228,7 @@ Config.AuthorizedWeapons = {
 		{ weapon = 'WEAPON_BZGAS', price = 100 }         -- GAS
 	},
 
-	sergeant = { -- SUB INSPECTOR
+	intendent = { -- SUB INSPECTOR
 		{ weapon = 'WEAPON_PISTOL_MK2', price = 10 },     -- PISTOLA 
 		{ weapon = 'WEAPON_PUMPSHOTGUN', price = 10 },        -- ESCOPETA
 		{ weapon = 'WEAPON_SNIPERRIFLE', price = 1000 },        -- SNIPER
@@ -240,7 +240,7 @@ Config.AuthorizedWeapons = {
 		{ weapon = 'WEAPON_BZGAS', price = 100 }          -- GAS  
 	},
 
-	intendent = { -- INSPECTOR
+	officer = { -- INSPECTOR
 		{ weapon = 'WEAPON_PISTOL_MK2', price = 10 },     -- PISTOLA  
 		{ weapon = 'WEAPON_PUMPSHOTGUN', price = 10 },        -- ESCOPETA
 		{ weapon = 'WEAPON_SNIPERRIFLE', price = 1000 },        -- SNIPER
@@ -252,7 +252,7 @@ Config.AuthorizedWeapons = {
 		{ weapon = 'WEAPON_BZGAS', price = 100 }          -- GAS 
 	},
 
-	lieutenant = { -- SUBCOMISARIO
+	sergeant = { -- SUBCOMISARIO
 		{ weapon = 'WEAPON_PISTOL_MK2', price = 10 },     -- PISTOLA 
 		{ weapon = 'WEAPON_PUMPSHOTGUN', price = 10 },        -- ESCOPETA
 		{ weapon = 'WEAPON_SNIPERRIFLE', price = 1000 },        -- SNIPER
@@ -264,7 +264,7 @@ Config.AuthorizedWeapons = {
 		{ weapon = 'WEAPON_BZGAS', price = 100 }          -- GAS
 	},
 
-	chef = { -- COMISARIO
+	lieutenant = { -- COMISARIO
 		{ weapon = 'WEAPON_PISTOL_MK2', price = 10 },     -- PISTOLA 	
 		{ weapon = 'WEAPON_PUMPSHOTGUN', price = 10 },        -- ESCOPETA
 		{ weapon = 'WEAPON_SNIPERRIFLE', price = 100 },        -- SNIPER
@@ -274,6 +274,18 @@ Config.AuthorizedWeapons = {
 		{ weapon = 'WEAPON_FLASHLIGHT', price = 10 },          -- ACCESORIOS
 		{ weapon = 'WEAPON_STUNGUN', price = 10 },             -- TASER	
 		{ weapon = 'WEAPON_BZGAS', price = 100 }        -- GAS
+	},
+
+	chef = { -- SUPERINTENDENTE
+		{ weapon = 'WEAPON_PISTOL_MK2', price = 10 },     -- PISTOLA 
+		{ weapon = 'WEAPON_PUMPSHOTGUN', price = 10 },        -- ESCOPETA
+		{ weapon = 'WEAPON_SNIPERRIFLE', price = 100 },        -- SNIPER
+		{ weapon = 'WEAPON_COMBATPDW', components = { nil, 1000, nill, 1000, 1000, 1000 }, price = 100 },    -- SUBFUSIL 
+		{ weapon = 'WEAPON_CARBINERIFLE', price = 100 },		-- FUSIL		
+		{ weapon = 'WEAPON_NIGHTSTICK', price = 10 },          -- ACCESORIOS	
+		{ weapon = 'WEAPON_FLASHLIGHT', price = 10 },          -- ACCESORIOS
+		{ weapon = 'WEAPON_STUNGUN', price = 10 },             -- TASER	
+		{ weapon = 'WEAPON_BZGAS', price = 100 }         -- GAS
 	},
 
 	boss = { -- SUPERINTENDENTE
@@ -328,21 +340,21 @@ Config.AuthorizedVehicles = {
 		{ model = 'riot', label = 'Patrulla SWAT', price = 1 }
 	},
 
-	officer = { -- SUB INSPECTOR
+	intendent = { -- SUB INSPECTOR
 		{ model = 'police', label = 'Patrulla #2', price = 1 },
 		{ model = 'police2', label = 'Patrulla #3', price = 1 },
 		{ model = 'police3', label = 'Patrulla #4', price = 1 },
 		{ model = 'riot', label = 'Patrulla SWAT', price = 1 }
 	},
 
-	sergeant = { -- INSPECTOR
+	officer = { -- INSPECTOR
 		{ model = 'police', label = 'Patrulla #2', price = 1 },
 		{ model = 'police2', label = 'Patrulla #3', price = 1 },
 		{ model = 'police3', label = 'Patrulla #4', price = 1 },
 		{ model = 'riot', label = 'Patrulla SWAT', price = 1 }
 	},
 
-	intendent = { -- SUB COMISARIO
+	sergeant = { -- SUB COMISARIO
 		{ model = 'police', label = 'Patrulla #2', price = 1 },
 		{ model = 'police2', label = 'Patrulla #3', price = 1 },
 		{ model = 'police3', label = 'Patrulla #4', price = 1 },
@@ -361,6 +373,13 @@ Config.AuthorizedVehicles = {
 		{ model = 'police2', label = 'Patrulla #3', price = 1 },
 		{ model = 'police3', label = 'Patrulla #4', price = 1 },
 		{ model = 'riot', label = 'Patrulla SWAT', price = 1 }
+	},
+
+	boss = { -- SUPERINTENDENTE
+		{ model = 'police', label = 'Patrulla #2', price = 1 },
+		{ model = 'police2', label = 'Patrulla #3', price = 1 },
+		{ model = 'police3', label = 'Patrulla #4', price = 1 },
+		{ model = 'riot', label = 'Patrulla SWAT', price = 1 }
 	}
 	
 }
@@ -374,47 +393,38 @@ Config.AuthorizedHelicopters = {
 
 	sargento = { -- SARGENTO
 		{ model = 'polmav', label = 'H-145', livery = 0, price = 500 }, -- H-145
-		{ model = 'valkyrie', label = 'Sicorsky', livery = 0, price = 500 } -- Sicorsky
 	},
 
 	sargento1 = { -- SARGENTO 1ro
 		{ model = 'polmav', label = 'H-145', livery = 0, price = 500 }, -- H-145
-		{ model = 'valkyrie', label = 'Sicorsky', livery = 0, price = 500 } -- Sicorsky
 	},
 
 	subaux = { -- SUB OFICIAL AUXILIAR
 		{ model = 'polmav', label = 'H-145', livery = 0, price = 500 }, -- H-145
-		{ model = 'valkyrie', label = 'Sicorsky', livery = 0, price = 500 } -- Sicorsky
 	},
 
-	officer = { -- SUB OFICIAL MAYOR
+	intendent = { -- SUB OFICIAL MAYOR
 		{ model = 'polmav', label = 'H-145', livery = 0, price = 500 }, -- H-145
-		{ model = 'valkyrie', label = 'Sicorsky', livery = 0, price = 500 } -- Sicorsky
 	},
 
-	sergeant = { -- SUB INSPECTOR
+	officer = { -- SUB INSPECTOR
 		{ model = 'polmav', label = 'H-145', livery = 0, price = 500 }, -- H-145
-		{ model = 'valkyrie', label = 'Sicorsky', livery = 0, price = 500 } -- Sicorsky
 	},
 
-	intendent = { -- INSPECTOR
+	sergeant = { -- INSPECTOR
 		{ model = 'polmav', label = 'H-145', livery = 0, price = 500 }, -- H-145
-		{ model = 'valkyrie', label = 'Sicorsky', livery = 0, price = 500 } -- Sicorsky
 	},
 
 	lieutenant = { -- SUB COMISARIO
 		{ model = 'polmav', label = 'H-145', livery = 0, price = 500 }, -- H-145
-		{ model = 'valkyrie', label = 'Sicorsky', livery = 0, price = 500 } -- Sicorsky
 	},
 
 	chef = { -- COMISARIO
 		{ model = 'polmav', label = 'H-145', livery = 0, price = 15000 }, -- H-145
-		{ model = 'valkyrie', label = 'Sicorsky', livery = 0, price = 500 } -- Sicorsky
 	},
 
 	boss = { -- COMISARIO GENERAL
 		{ model = 'polmav', label = 'H-145', livery = 0, price = 500 }, -- H-145
-		{ model = 'valkyrie', label = 'Sicorsky', livery = 0, price = 500 } -- Sicorsky
 	}
 }
 
@@ -423,26 +433,26 @@ Config.AuthorizedHelicopters = {
 Config.Uniforms = {
 	recruit_wear = {
 		male = {
-			['tshirt_1'] = 122,  ['tshirt_2'] = 0,
-			['torso_1'] = 111,   ['torso_2'] = 0,
+			['tshirt_1'] = 59,  ['tshirt_2'] = 1,
+			['torso_1'] = 55,   ['torso_2'] = 0,
 			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 27,
-			['pants_1'] = 46,   ['pants_2'] = 0,
+			['arms'] = 41,
+			['pants_1'] = 25,   ['pants_2'] = 0,
 			['shoes_1'] = 25,   ['shoes_2'] = 0,
 			['helmet_1'] = 46,  ['helmet_2'] = 0,
 			['chain_1'] = 0,    ['chain_2'] = 0,
 			['ears_1'] = 2,     ['ears_2'] = 0
 		},
 		female = {
-			['tshirt_1'] = 35,  ['tshirt_2'] = 0,
+			['tshirt_1'] = 36,  ['tshirt_2'] = 1,
 			['torso_1'] = 48,   ['torso_2'] = 0,
-			['decals_1'] = 7,   ['decals_2'] = 3,
+			['decals_1'] = 0,   ['decals_2'] = 0,
 			['arms'] = 44,
 			['pants_1'] = 34,   ['pants_2'] = 0,
 			['shoes_1'] = 27,   ['shoes_2'] = 0,
-			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['helmet_1'] = 45,  ['helmet_2'] = 0,
 			['chain_1'] = 0,    ['chain_2'] = 0,
-			['ears_1'] = 2,     ['earrings_2'] = 0
+			['ears_1'] = 2,     ['ears_2'] = 0
 		}
 	},
 	cabo_wear = { -- CABO
@@ -565,7 +575,31 @@ Config.Uniforms = {
 			['ears_1'] = 2,     ['earrings_2'] = 0
 		}
 	},
-	officer_wear = { -- SUB OFICIAL MAYOR
+	intendent_wear = { -- SUB OFICIAL MAYOR
+		male = {
+			['tshirt_1'] = 16,  ['tshirt_2'] = 0,
+			['torso_1'] = 111,   ['torso_2'] = 3,
+			['decals_1'] = 0,   ['decals_2'] = 0,
+			['arms'] = 33,
+			['pants_1'] = 33,   ['pants_2'] = 0,
+			['shoes_1'] = 24,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 0,    ['chain_2'] = 0,
+			['ears_1'] = -1,     ['ears_2'] = 0
+		},
+		female = {
+			['tshirt_1'] = 10,  ['tshirt_2'] = 0,
+			['torso_1'] = 73,   ['torso_2'] = 2,
+			['decals_1'] = -1,   ['decals_2'] = 3,
+			['arms'] = 33,
+			['pants_1'] = 6,   ['pants_2'] = 0,
+			['shoes_1'] = 29,   ['shoes_2'] = 0,
+			['helmet_1'] = -1,  ['helmet_2'] = 0,
+			['chain_1'] = 0,    ['chain_2'] = 0,
+			['ears_1'] = -1,     ['earrings_2'] = 0
+		}
+	},
+	officer_wear = {
 		male = {
 			['tshirt_1'] = 16,  ['tshirt_2'] = 0,
 			['torso_1'] = 111,   ['torso_2'] = 3,
@@ -590,30 +624,6 @@ Config.Uniforms = {
 		}
 	},
 	sergeant_wear = {
-		male = {
-			['tshirt_1'] = 16,  ['tshirt_2'] = 0,
-			['torso_1'] = 111,   ['torso_2'] = 3,
-			['decals_1'] = 0,   ['decals_2'] = 0,
-			['arms'] = 33,
-			['pants_1'] = 33,   ['pants_2'] = 0,
-			['shoes_1'] = 24,   ['shoes_2'] = 0,
-			['helmet_1'] = -1,  ['helmet_2'] = 0,
-			['chain_1'] = 0,    ['chain_2'] = 0,
-			['ears_1'] = -1,     ['ears_2'] = 0
-		},
-		female = {
-			['tshirt_1'] = 10,  ['tshirt_2'] = 0,
-			['torso_1'] = 73,   ['torso_2'] = 2,
-			['decals_1'] = -1,   ['decals_2'] = 3,
-			['arms'] = 33,
-			['pants_1'] = 6,   ['pants_2'] = 0,
-			['shoes_1'] = 29,   ['shoes_2'] = 0,
-			['helmet_1'] = -1,  ['helmet_2'] = 0,
-			['chain_1'] = 0,    ['chain_2'] = 0,
-			['ears_1'] = -1,     ['earrings_2'] = 0
-		}
-	},
-	intendent_wear = {
 		male = {
 			['tshirt_1'] = 16,  ['tshirt_2'] = 0,
 			['torso_1'] = 111,   ['torso_2'] = 3,
